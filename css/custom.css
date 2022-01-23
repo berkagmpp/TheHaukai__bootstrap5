@@ -1,0 +1,499 @@
+/*=======================================*/
+
+/*			 Table of contents           */
+
+/*=======================================*/
+
+/*
+1. Typography
+2. Common content setting 
+3. Header
+4. Footer
+5. Index page
+6. Adjustment other pages
+7. Media query
+
+
+
+/**--- 1. Typography ---**/
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/poppins-v15-latin-300.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/poppins-v15-latin-300.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/poppins-v15-latin-300.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/poppins-v15-latin-300.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/poppins-v15-latin-300.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/poppins-v15-latin-300.svg#Poppins') format('svg');
+    /* Legacy iOS */
+}
+
+/* poppins-500 - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/poppins-v15-latin-500.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('./fonts/poppins-v15-latin-500.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/poppins-v15-latin-500.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/poppins-v15-latin-500.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/poppins-v15-latin-500.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/poppins-v15-latin-500.svg#Poppins') format('svg');
+    /* Legacy iOS */
+}
+
+/* poppins-700 - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/poppins-v15-latin-700.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/poppins-v15-latin-700.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/poppins-v15-latin-700.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/poppins-v15-latin-700.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/poppins-v15-latin-700.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/poppins-v15-latin-700.svg#Poppins') format('svg');
+    /* Legacy iOS */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+}
+
+h1 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 2.3rem;
+    letter-spacing: -0.1rem;
+    word-spacing: 0.6rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: left;
+    line-height: 1.7rem;
+    color: #000;
+}
+
+h4 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: left;
+    color: #000;
+}
+
+h6 {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #000;
+}
+
+a:hover {
+    color: #d89e68;
+}
+
+a:visited {
+    color: #000;
+}
+
+li {
+    color: #000;
+    list-style: none;
+}
+.right-align{
+ text-align: right;
+}
+
+.p-clamp {
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    display: -webkit-box;
+    text-align: left;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+
+
+/**--- 2. Common content setting  ---**/
+
+.row {
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.bg-container {
+    background: url("../img/banner.jpg") no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.bg-container .row {
+    --bs-gutter-x: 0;
+    margin: 0;
+}
+
+button {
+    background: transparent;
+}
+
+.img-fluid img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.mt-3 {
+    min-height: 50px;
+}
+
+
+
+ /**--- 3. Header ---**/
+
+.h1 img {
+    margin: 10px 5px 10px 0;
+}
+
+.booking-box {
+    border: 1px solid #181818;
+    padding: 0 9px;
+}
+
+.booking-box a:hover {
+    border: 1px solid #fff;
+    background-color: #d89e68;
+    color: #fff;
+}
+
+#booking-po {
+    padding-top: 7px;
+}
+
+#navbar-static {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.navbar-full {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar-full ul {
+    height: 100vh;
+    text-align: center;
+    justify-content: space-evenly;
+    padding-bottom: 28%;
+}
+
+.navbar-dis {
+    align-items: center;
+    justify-content: space-between;
+}
+
+#btn_menu {
+    right: 0;
+    display: none;
+}
+
+.navbar-dis li {
+    margin: 0 10px;
+    white-space: nowrap;
+}
+
+.section-head {
+    padding-top: 3em;
+}
+
+.section-head h2 {
+    text-align: initial;
+    color: #282828;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.colPost {
+    max-width: 400px;
+}
+
+
+
+/**--- 4. Footer ---**/
+
+footer {
+    background: #004368;
+}
+
+.colFoot {
+    max-width: 396px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    font-weight: 300;
+}
+
+.col-subnav a, .colFoot h4 {
+    color: white;
+    cursor: pointer;
+}
+
+.con-phone {
+    letter-spacing: 0.5rem;
+}
+
+.con-address {
+    padding-top: 2rem;
+    line-height: 3.5rem;
+}
+
+#copyright-text, .font-09 {
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+}
+
+
+
+/**--- 5. Index page ---**/
+
+/*- 5. Index page : main banner -*/
+.banner {
+    background: url("../img/banner.jpg") no-repeat center;
+    background-attachment: fixed;
+    height: 95vh;
+    background-size: cover;
+}
+.slogan img {
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 10px;
+    background-size: auto;
+    z-index: 2;
+}
+
+/*- 5. Index page : text section -*/
+.main-h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+.text-content-container {
+    padding: 1rem 15vw;
+}
+
+
+
+/*- 5. Index page : content link section -*/
+
+.main-bg-cover {
+    background-color: rgba(193, 210, 226, 0.7);
+}
+
+.main-wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(141px, 396.6px));
+    text-align: center;
+    justify-content: center;
+    gap: 0;
+    margin: 0 auto;
+}
+
+.img-menu, #text-menu, #text-abouthaukai, .img-abouthaukai, .img-restaurant_1, .img-location, #text-location {
+    height: 330px;
+    position: relative;
+}
+
+.img-menu, .img-restaurant_1, .img-restaurant_2, #text-menu, #text-abouthaukai {
+    max-width: 330px;
+}
+
+.img-abouthaukai, .img-restaurant_2, .img-location, #text-location {
+    max-width: 495px;
+}
+
+.img-menu {
+    grid-column: 2/4;
+    background: url("../img/img-menu_330x330.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#text-menu {
+    grid-column: 5/7;
+    background: url("../img/text-menu_330x330.jpg") no-repeat;
+    background-size: cover;
+}
+
+#text-abouthaukai {
+    grid-column: 1/3;
+    background: url("../img/text-abouthaukai_330x330.jpg") no-repeat;
+    background-size: cover;
+}
+
+.img-abouthaukai {
+    grid-column: 3/6;
+    background: url("../img/img-abouthaukai_495x330.jpg") no-repeat;
+    background-size: cover;
+}
+
+.img-restaurant_1 {
+    grid-column: 2/4;
+    background: url("../img/img-restaurant_1_330x330.jpg") no-repeat;
+    background-size: cover;
+}
+
+.img-restaurant_2 {
+    grid-column: 4/7;
+    background: url("../img/img-restaurant_2_495x330.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.img-location {
+    grid-column: 1/4;
+    background: url("../img/img-location_495x330.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#text-location {
+    grid-column: 5/7;
+    background: url("../img/text-location_495x330.jpg") no-repeat;
+    background-size: cover;
+}
+
+.img-cover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.img-cover h4 {
+    font-size: 2em;
+    font-weight: 500;
+    line-height: 1em;
+    color: #fff;
+}
+
+/*- 5. Index page : posting link section -*/
+
+
+
+
+
+/**--- 7. Media query ---**/
+@media screen and (max-width: 991px) {   /*- 991: md -*/
+
+    /*- Common content -*/
+    .row {
+        justify-content: center;
+    }
+    /*- Header -*/
+    .navbar-dis {
+        display: none;
+    }
+    #btn_menu {
+        display: inline;
+    }
+    .section-head h2 {
+        text-align: center;
+        padding: 2rem;
+    }
+    /*- Index page : content link section -*/
+    .main-wrapper {
+        grid-template-columns: repeat(2, minmax(155px, 330px));
+    }
+    .img-menu, #text-menu, #text-abouthaukai, .img-abouthaukai, .img-location, #text-location, .img-restaurant_1, .img-restaurant_2 {
+        width: 100%;
+        height: 0;
+        padding-top: calc(330/330 * 100%);
+    }
+    .img-menu, #text-abouthaukai, .img-restaurant_1, .img-location {
+        grid-column: 1/2;
+    }
+    #text-menu, .img-abouthaukai, .img-restaurant_2,  #text-location {
+        grid-column: 2/3;
+    }
+    .img-cover h4 {
+        font-size: 1.6em;
+    }
+}
+
+@media screen and (max-width: 767px) {   /*- 767: sm-*/
+    /*- Common content -*/
+
+
+
+    /*- Index page : content link section -*/
+}
+
+@media screen and (max-width: 576px) {   /*- 576: xs-*/
+    /*- Common content -*/
+
+
+
+    /*- Index page : content link section -*/
+}

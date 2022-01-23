@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | HAUKAI RESTAURANT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<!-- Header -->
+<header>
+    <!-- Top navbar -->
+    <nav class="navbar">
+        <div class="content">
+            <!-- Top Logo -->
+            <div class="logo" role="link" aria-label="Logo-HAUKAI">
+                <a href="index.html">
+                        HAUKAI
+                    <div class="letter" role="link" aria-label="Logo-RESTAURANT">
+                        RESTAURANT
+                    </div>
+                </a>
+            </div>
+            <!-- Top menu navigation -->
+            <ul class="menu-list">
+                <!-- The x icon -->
+                <li class="icon cancel-btn">
+                    <input type="image" src="img/times.png" alt="Cancel button">
+                </li>
+                <!-- The nav list -->
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about_us.html">ABOUT US</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li class="booking-box"><a href="booking_buy.html">BOOKING &amp; BUY</a></li>
+            </ul>
+            <!-- The hamburger icon -->
+            <div class="icon menu-btn">
+                <input type="image" src="img/bars.png" alt="Hamburger button">
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- End Header -->
+
+    <!-- Main -->
+    <main>
+        <!-- top img banner -->
+        <div class="about_us_banner" role="banner" aria-label="The top page banner">
+            <div class="inner-page-banner">
+                <!-- responsive picture srcset for 415w, 900w, 1600w -->
+                <picture>
+                    <source media="(min-width: 1600px)" srcset="img/contact_2200x1162.jpg">
+                    <source media="(min-width: 415px)" srcset="img/contact_900x475.jpg">
+                    <source media="(max-width: 414px)" srcset="img/contact_411x217.jpg">
+                    <img src="img/contact_411x217.jpg" alt="Contact background: A AT, a mail and a phone simbol">
+                </picture>
+                <div class="banner_text_container">
+                    <div class="banner-box">
+                        <h1>CONTACT</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- page sub menu -->
+        <div class="about-sub-menu" role="navigation" aria-label="sub menu">
+            <div class="content">
+                <div class="sub-menu-container">
+                    <ul class="sub-menu-list">
+                        <li><a href="#section-six">ENQUIRY</a></li>
+                        <li><a href="#section-one">ADDRESS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- content -->
+        <section class="bg-container" role="contentinfo" aria-label="Contact information">
+            <div class="content">
+                <!-- enquiry section -->
+                <div id="section-six" aria-label="Enquiry form">
+                    <div class="split-box-four">
+                        <div class="bg-cover-100">
+                            <div class="heading-area">
+                                <h2>ENQUIRY</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="split-box-four">
+                        <div class="bg-cover-100-text">
+                            <form id="enquiryform" action="#" method="post" aria-label="Submit enquiry">
+                                <div class="entercs">
+                                    <div class="enter_bundle" aria-label="Name">  
+                                        <div class="bundle_tit">
+                                            <label for="cus_name">Name:</label>
+                                        </div>
+                                        <div class="bundle_input" aria-labelledby="cus_name">
+                                            <input type="text" id="cus_name" name="cus_name" required placeholder=" Plese enter your name"><br>
+                                        </div>
+                                    </div>
+                                    <div class="enter_bundle" aria-label="Email"> 
+                                        <div class="bundle_tit">
+                                            <label for="cus_email">Email:</label>
+                                        </div>
+                                        <div class="bundle_input" aria-labelledby="cus_email">
+                                            <input type="text" id="cus_email" name="cus_email"required placeholder=" Plese enter your email adress"><br>
+                                        </div>
+                                    </div>
+                                    <div class="enter_bundle" aria-label="Content"> 
+                                        <div class="bundle_tit">
+                                            <label for="cus_content">Content:</label>
+                                        </div>
+                                        <div class="bundle_input" aria-labelledby="cus_content">
+                                            <textarea rows="6" cols="60" id="cus_content" name="cus_content" required placeholder="Please fill out the details of your inquiry."></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="enter_bundle" aria-labelledby="submit">
+                                        <input type="submit" id="submit" value="SUBMIT">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- address section -->
+                <div id="section-one" aria-label="Address and phone">
+                    <div class="split-box-one">
+                        <div class="bg-cover-35">
+                            <div class="heading-area">
+                                <h2>ADDRESS</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="split-box-two">
+                        <div class="bg-cover-65">
+                            <div class="text-area">
+                                <div class="con-phone">
+                                    <p>Tel: 09 401 4019</p>
+                                </div>
+                                <p>1 Island Street<br>Kerikeri, Bay of Islands<br>New Zealand</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="map_box" aria-label="Google map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11615.282571345257!2d174.00238844449052!3d-35.22069815766716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0bb73e31b0728b%3A0x500ef6143a2d500!2sKerikeri!5e0!3m2!1sen!2snz!4v1642044788042!5m2!1sen!2snz" 
+                            title="Google map for location" allowfullscreen="" loading="lazy"></iframe>
+                </div>  
+            </div>
+        </section>
+        <!-- End content -->
+    </main>
+    <!-- End main -->
+    
+    <!-- Footer -->
+    <footer>
+        <div class="foot">
+            <div class="content">
+                <div class="content-container">
+                    <!-- sns icons -->
+                    <div class="footicon" role="img" aria-label="SNS icons">
+                        <div class="icon-container">
+                            <img src="img/icon_facebook.png" alt="Facebook icon">
+                            <img src="img/icon_insta.png" alt="Instagram icon">
+                            <img src="img/icon_google.png" alt="Google icon">
+                            <img src="img/icon_youtube.png" alt="Youtube icon">
+                            <img src="img/icon_pinter.png" alt="Pinterest icon">
+                        </div>
+                        <div class="foot-opentext" aria-label="Hours information">
+                            <h4>OPENING HOURS</h4><p>WED to SUN : 17:00 - 23:00<br>MON & TUE : Closed</p>
+                        </div>
+                    </div>
+                    <!-- footer-nav -->
+                    <div class="footnav" role="navigation" aria-label="Footer navigation">
+                        <ul class="menu-list">
+                            <li><a href="privacy_policy.html">PRIVACY POLICY</a></li>
+                            <li><a href="#">TERMS &amp; CONDITIONS</a></li>
+                            <li><a href="contact.html">CONTACT &amp; HELP</a></li>
+                            <li><a href="#">FOR EMPLOYEES</a></li>
+                        </ul>
+                    </div>
+                    <!-- footer-contact -->
+                    <div class="footcontact" aria-label="Contanct information">
+                            <div class="con-phone">
+                                <p>09 401 4019</p>
+                            </div>
+                            <div class="con-address">
+                                <p>1 Island Street<br>Kerikeri, Bay of Islands<br>New Zealand</p>
+                            </div>
+                    </div>
+                    <div class="footcredit" aria-label="Copyright display" aria-labelledby="text-muted">
+                        <span id="text-muted" aria-label="Copyright information"></span>
+                        <span>&nbsp;All Rights Reserved.</span>
+                    </div>
+                </div>        
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+    <script src="script.js"></script>
+</body>
+</html>

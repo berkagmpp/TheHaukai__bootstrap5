@@ -122,20 +122,26 @@
                         <h2 class="mb-0 heading-area">ENQUIRY</h2>
                     </div>
                     <form class="col-12 py-4 form-cover" id="enquiryform" action="#" method="post" aria-label="Submit enquiry">
-                        <div class="mb-3" aria-label="Name">
+                        <div aria-label="Name">
                             <label class="form-label" for="cus_name">Name:</label>
-                            <input type="text" class="form-control" id="cus_name" name="cus_name" required
-                                placeholder=" Plese enter your name"><br>
+                            <input type="text" class="form-control" id="cus_name" name="cus_name" maxlength="25" required
+                                   onkeyup="nameCharCheck(this)" onkeydown="nameCharCheck(this)"
+                                   placeholder=" Plese enter your name"><br>
+                            <div class="alert px-3 py-2" id="name-error"></div>
                         </div>
-                        <div class="mb-3" aria-label="Email">
+                        <div aria-label="Email">
                             <label class="form-label" for="cus_email">Email:</label>
-                            <input type="email" class="form-control" id="cus_email" name="cus_email" required
-                                placeholder=" Plese enter your email adress"><br>
+                            <input type="email" class="form-control" id="cus_email" name="cus_email" maxlength="50" required
+                                   onkeyup="emailCharCheck(this)" onkeydown="emailCharCheck(this)"
+                                   placeholder=" Plese enter your email adress"><br>
+                            <div class="alert px-3 py-2" id="email-error"></div>
                         </div>
-                        <div class="mb-3" aria-label="Content">
+                        <div class="pb-4" aria-label="Content">
                             <label class="form-label" for="cus_content">Content:</label>
-                            <textarea rows="6" class="form-control" cols="60" id="cus_content" name="cus_content" required
-                                placeholder="Please fill out the details of your inquiry"></textarea>
+                            <textarea rows="6" class="form-control" cols="60" id="cus_content" name="cus_content" maxlength="3000" required
+                                      onkeyup="contentCharCheck(this)" onkeydown="contentCharCheck(this)"
+                                      placeholder="Please fill out the details of your inquiry"></textarea>
+                            <div class="alert d-flex align-items-center px-3 py-2 my-3" id="content-error"></div>
                         </div>
                         <div class="d-block btn btn-outline-secondary justify-content-center mb-3" aria-labelledby="submit">
                             <input type="submit" class="bg-transparent" id="submit" value="SUBMIT">

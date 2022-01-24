@@ -4,27 +4,38 @@ const menuBtn = document.getElementById("btn_menu");
 const cancelBtn = document.getElementById("btn_cancel");
 const navbarStatic = document.getElementById("navbar-static");
 const navbarFull = document.getElementById("navbar-full");
+const nav = document.querySelector("nav");
+
 menuBtn.onclick = () => {
     navbarFull.style.display = "flex";
     navbarStatic.style.display = "none";
     body.classList.add("disabled");
 }
+
 cancelBtn.onclick = () => {
     navbarFull.style.display = "none";
     navbarStatic.style.display = "flex";
     body.classList.remove("disabled");
 }
 
+window.onscroll = () => {
+    this.scrollY > 20 ? nav.classList.add("sticky-top") : nav.classList.remove("sticky-top");
+}
+
+
+
 // footer: copyright auto generation
 let copyYear = "2021";
 let now = new Date;
 let curYear = now.getFullYear();
 let credit = document.getElementById("copyright-text");
+
 if (copyYear == curYear) credit.innerHTML = copyYear + ", The HAUKAI";
 else credit.innerHTML = copyYear + "-" + curYear + ", The HAUKAI";
 
+
 // contact page: submit button click
-window.onload = function () {  // event run after entire page loading, including its content
+if (document.getElementById("submit")) {
     document.getElementById("submit").addEventListener("click", function(event) {
         event.preventDefault(); // prevent opening the URL
         let name = document.getElementById("cus_name");

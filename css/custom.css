@@ -17,6 +17,7 @@
 
 /**--- 1. Typography ---**/
 
+/* poppins-300 - latin */
 @font-face {
     font-family: 'Poppins';
     font-style: normal;
@@ -291,6 +292,7 @@ button {
 }
 
 
+
 /**--- 3. Header ---**/
 
 .h1 img {
@@ -320,7 +322,7 @@ nav {
     background: #fff;
     opacity: 90%;
     padding: 20px 0 0 0;
-    box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
 #navbar-static {
@@ -563,7 +565,7 @@ footer {
 
 /*- Blog page -*/
 #cse {
-    width: 50%; 
+    width: 50%;
     margin: 0 auto;
 }
 
@@ -577,13 +579,16 @@ footer {
     .row {
         justify-content: center;
     }
+
     .top-page-banner {
         height: 70vh;
         max-height: 300px;
     }
+
     .head-cover, .text-cover {
         padding: 1rem;
     }
+
     .impo-margin {
         margin: 0 1rem !important;
     }
@@ -632,9 +637,9 @@ footer {
     /**--- 6. Adjustment other pages ---**/
     /*- Blog page -*/
     #cse {
-        width: 100%; 
+        width: 100%;
     }
-    
+
 }
 
 @media screen and (max-width: 576px) {
@@ -676,6 +681,7 @@ footer {
         padding-left: 3% !important;
         padding-right: 3% !important;
     }
+
     .impo-margin {
         margin: 0 !important;
     }

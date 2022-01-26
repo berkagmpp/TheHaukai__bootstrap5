@@ -131,8 +131,9 @@ a {
     color: #000;
 }
 
-a:hover, .nav-item a:hover, .nav-fs-5 a:hover{
+a:hover, .nav-item a:hover, .nav-fs-5 a:hover {
     color: #d89e68;
+    font-weight: 700;
 }
 
 a:visited {

@@ -95,37 +95,39 @@ const manager = (function () {
     const cusEmail = document.getElementById("cus_email");
     // const cusContent = document.getElementById("cus_content");
 
-    if (document.getElementById("submit")) {
-        document.getElementById("submit").addEventListener("click", submit);
-        function submit(event) {
-            event.preventDefault(); // prevent opening the URL
-            if (cusName.value == "" || cusEmail.value == "" || cusContent.value == "") {
+    function submit(event) {
+        event.preventDefault(); // prevent opening the URL
+        if (cusName.value == "" || cusEmail.value == "" || cusContent.value == "") {
+            contentError.classList.add("alert-danger");
+            contentError.innerHTML="Please enter all fields.";
+            contentSettimeout();
+            return false;
+        } else {
+            // check input values again for preventing Command Injection
+            if (nameRegEx.test(cusName.value) | emailRegEx.test(cusEmail.value) | contentRegEx.test(cusContent.value)) {
                 contentError.classList.add("alert-danger");
-                contentError.innerHTML="Please enter all fields.";
+                contentError.innerHTML="Please enter correctly.";
                 contentSettimeout();
                 return false;
             } else {
-                // check input values again for preventing Command Injection
-                if (nameRegEx.test(cusName.value) | emailRegEx.test(cusEmail.value) | contentRegEx.test(cusContent.value)) {
-                    contentError.classList.add("alert-danger");
-                    contentError.innerHTML="Please enter correctly.";
-                    contentSettimeout();
-                    return false;
+                if (confirm ("Are you sure to submit?\n\n Name: " + cusName.value
+                    + "\n Email: " + cusEmail.value + "\n Content: \n" + cusContent.value) == true) {
+                        // needed server-side validation after integration for security
+                        cusName.value = "";
+                        cusEmail.value = "";
+                        cusContent.value = "";
+                        contentError.classList.add("alert-success");
+                    contentError.innerHTML = "Submit complete.";
                 } else {
-                    if (confirm ("Are you sure to submit?\n\n Name: " + cusName.value
-                        + "\n Email: " + cusEmail.value + "\n Content: \n" + cusContent.value) == true) {
-                            // needed server-side validation after integration for security
-                            cusName.value = "";
-                            cusEmail.value = "";
-                            cusContent.value = "";
-                            contentError.classList.add("alert-success");
-                        contentError.innerHTML = "Submit complete.";
-                    } else {
-                        return false;
-                    }
+                    return false;
                 }
             }
         }
+    }
+
+    if (document.getElementById("submit")) {
+        document.getElementById("submit").addEventListener("click", submit);
+        function submit(event);
     }
     return {
         nameCharCheck: nameCharCheck,
@@ -142,14 +144,14 @@ const manager = (function () {
 // Use of Closure: Prevent exposure and inaccessible of regional variables and functions declared inside anonymous function
 // Set to excute footer-copyright with html and script(DOMContentLoaded) loading before onload
 (function () { 
-    const copyYear = "2021";
+    const copyYear = 2021;
     const now = new Date;
     const curYear = now.getFullYear();
     const credit = document.getElementById("copyright-text");
 
     window.addEventListener('DOMContentLoaded', copyText);
     function copyText() {
-        if (copyYear == curYear) {
+        if (copyYear === curYear) {
             credit.innerHTML = copyYear + ", The HAUKAI";
         } else {
             credit.innerHTML = copyYear + "-" + curYear + ", The HAUKAI";

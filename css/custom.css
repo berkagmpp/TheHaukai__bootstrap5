@@ -315,13 +315,13 @@ button {
     padding: 0 9px;
 }
 
-#booking-bo a:hover, #booking-po a:hover {
+#booking-bo a:hover, #booking-po a:hover, #dev-po a:hover {
     border: 1px solid #fff;
     background-color: #d89e68;
     color: #fff;
 }
 
-#booking-po {
+#booking-po, #dev-po {
     padding-top: 7px;
 }
 

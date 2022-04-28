@@ -93,7 +93,10 @@ const manager = (function () {
     // Submit click
     const cusName = document.getElementById("cus_name");
     const cusEmail = document.getElementById("cus_email");
-    // const cusContent = document.getElementById("cus_content");
+
+    if (document.getElementById("submit")) {
+        document.getElementById("submit").addEventListener("click", submit);
+    }
 
     function submit(event) {
         event.preventDefault(); // prevent opening the URL
@@ -125,10 +128,6 @@ const manager = (function () {
         }
     }
 
-    if (document.getElementById("submit")) {
-        document.getElementById("submit").addEventListener("click", submit);
-        function submit(event);
-    }
     return {
         nameCharCheck: nameCharCheck,
         emailCharCheck: emailCharCheck,
